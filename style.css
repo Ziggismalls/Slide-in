@@ -1,3 +1,18 @@
+* {
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: 100px;
+  gap: 50px;
+}
+.anim {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
 .carre {
   animation: rotate 2.5s infinite;
 }
@@ -23,7 +38,7 @@
     opacity: 0;
   }
 }
-.carre3 {
+.carre2 {
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
@@ -37,7 +52,7 @@
     transform: scale(1);
   }
 }
-.carre4 {
+.carre3 {
   animation: slide 2s infinite;
 }
 @keyframes slide {
@@ -45,23 +60,25 @@
     transform: translateX(0);
   }
   50% {
-    transition: translateX(50px);
+    transform: translateX(50px);
   }
   100% {
     transform: translateX(0);
   }
 }
-.carre5 {
-  animation: bounce 2s infinite;
+
+.carre4 {
+  animation: bounce 1s infinite;
 }
 @keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
+  0%,
   50% {
-    transition: translateY(50px);
-  }
-  100% {
     transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-5px);
   }
 }
